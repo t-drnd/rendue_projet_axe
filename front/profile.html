@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="api.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Profile</title>
+  </head>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <a href="#"
+          ><img
+            id="Harry-Potter"
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Harry_Potter_wordmark.svg"
+            alt="Harry Potter"
+        /></a>
+      </div>
+      <a href="#bob" class="action_btn">Rejoignez l'aventure</a>
+      <div class="toggle_btn"><i class="fa-solid fa-bars"></i></div>
+    </div>
+    <div class="menu">
+      <li><a href="#bob" class="action_btn">Rejoignez l'aventure</a></li>
+    </div>
+  </header>
+  <body>
+    <!-- <nav class="sidebar">
+      <div class="logo-menu">
+        <h2 class="logo">Thomas</h2>
+        <i class='bx bx-menu'></i>
+      </div>
+
+      <ul class="list">
+        <li class="list-item">
+          <a href="#">
+            <span class="link-name">Toutes les cartes</span>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="#">
+            <span class="link-name">Mes cartes</span>
+          </a>
+        </li>
+      </ul>
+    </nav> -->
+    
+    <main>
+      <div class="btnUp">
+        <img src="arrowUp.svg" class="icone" />
+      </div>
+      <div class="title">
+        <h1>
+          Bienvenu à vous <span id="username"></span>, vous êtes connecté !
+        </h1>
+      </div>
+      <div class="intro">
+        Le monde magique d'Harry Potter vous ouvres ses portes
+      </div>
+      <div class="pres">
+        Voici la liste des toutes les cartes à colectionner
+      </div>
+      <i class="fa-solid fa-chevron-down"></i>
+      <section class="cards">
+        <title>Harry Potter | collection</title>
+        <div id="slider" class="cards-container">
+          <!-- Les éléments de slider seront ajoutés dynamiquement -->
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Notre société</h4>
+            <ul>
+              <li><a href="#">à propos de nous</a></li>
+              <li><a href="#">nos services</a></li>
+              <li><a href="#">politique de confidentialité</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Suivez-nous</h4>
+            <div class="social-links">
+              <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            </div>
+          </div>
+        </div>
+        <div class="footerBottom">
+          <p>Copyright &copy;2024; Designed by Thomas Durand</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="profile.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+</html>

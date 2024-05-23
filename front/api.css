@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+*,
+*::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("./image/hp-seamless.jpeg");
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  z-index: -1;
+}
+
+#Harry-Potter {
+  width: 150px;
+  display: flex;
+  height: 50px;
+  background: gray;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+a:hover {
+  color: orange;
+}
+
+header {
+  height: 10vh;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.navbar {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  padding: 0px 10px;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Lato";
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+}
+
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar .toggle_btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.toggle_btn i {
+  font-size: 180%;
+}
+
+.action_btn {
+  background-color: orange;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+  scale: 1.05;
+  color: #fff;
+}
+
+.action_btn:active {
+  scale: 0.95;
+}
+
+.menu {
+  position: absolute;
+  right: 2rem;
+  top: 90px;
+  height: 0;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu.open {
+  height: 180px;
+}
+
+.menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu .action_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pres {
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.btnUp {
+  height: 80px;
+  width: 80px;
+  background: crimson;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+.icone {
+  width: 50px;
+}
+
+#imagefond {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  position: absolute;
+}
+
+#slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Permet aux cartes de passer à la ligne sur des écrans plus petits */
+  justify-content: center; /* Centre les cartes horizontalement */
+  gap: 40px; /* Espacement entre les cartes */
+  margin-top: 20px; /* Espacement au-dessus du conteneur de cartes */
+}
+
+.card {
+  position: relative;
+  padding: 20px;
+  margin: 20px; /* Ajuste pour permettre un espacement uniforme autour des cartes */
+  width: calc((90% - 80px) / 3); /* Largeur fixe pour chaque carte */
+  height: 450px; /* Hauteur fixe pour chaque carte */
+  background-color: #1f5677;
+  box-shadow: 0 0 15px rgba(252, 229, 103, 0.75);
+  clip-path: polygon(0, 100% 0, 100% 100%, 0 100%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column; /* Organise les éléments de la carte en colonne */
+  align-items: center; /* Centre les éléments horizontalement dans la carte */
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 20px;
+  border: 5px double #cfcfcf; /* Bordure dorée */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  ); /* Réplication de la forme pentagonale */
+}
+
+.card img {
+  margin-top: 100%;
+  width: 60%;
+  height: auto; /* Pour conserver les proportions */
+  border-radius: 10px 10px 0 0;
+  margin: -10% auto 0; /* Centrer l'image et la monter un peu */
+  display: flex;
+  min-height: 360px;
+  object-fit: contain;
+}
+
+.card h2,
+.card p {
+  color: #ff6a00;
+}
+
+.card h2 {
+  margin-top: 0;
+  justify-content: center;
+  text-align: center;
+}
+
+.card p {
+  text-align: center;
+  font-style: italic;
+}
+
+.card-details-link {
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+  margin-left: 0px;
+}
+
+.container {
+  /* text-align: center; */
+  margin-top: 100px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #fff;
+  justify-content: center;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.intro {
+  color: #fff;
+  text-align: center;
+  margin-top: 60px;
+  text-decoration: underline;
+  font-family: "Lato";
+  font-size: 20px;
+  padding: 0px 10px;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer {
+  background-color: #24262b;
+  padding: 70px 0;
+}
+
+.footer-col {
+  width: 50%;
+  padding: 0 30px;
+}
+
+.footer-col h4 {
+  font-size: 25px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 80px;
+}
+
+.footer-col ul li a {
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+  padding-left: 8px;
+}
+
+.footer-col .social-link {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  /* text-align: center; */
+  line-height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-link a:hover {
+  color: #24262b;
+  background-color: #fff;
+}
+
+.footerBottom {
+  background-color: black;
+  padding: 10px;
+  /* text-align: center; */
+}
+
+.footerBottom p {
+  color: #fff;
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    font-size: 10px;
+  }
+  .Histoire .text p {
+    display: flex;
+  }
+  .menu {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .menu {
+    left: 2rem;
+    width: unset;
+  }
+}
